@@ -1,17 +1,15 @@
-from fastapi import FastAPI, HTTPException
+from fastapi import Depends, FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from pydantic import BaseModel
-import sqlalchemy
+from sqlalchemy.orm import Session
+from sqlalchemy.orm import sessionmaker
 
-class Product(BaseModel):
-    id: int
-    name: str
-    description: str
-    price: float
-
+from . import crud, models
+from .database import SessionLocal, engine
+models.Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
 
+ 
 origins = [
     "http://localhost",
     "http://localhost:8080",
@@ -32,12 +30,23 @@ app.add_middleware(
 )
 
 
+def get_db():
+    db = SessionLocal()
+    try:
+        yield db
+    finally:
+        db.close()
+
+
+
+
 @app.get("/")
 async def main():
-    return {"message": "Hello World!"}
+    return {"message": "Hello world!"}
 
 
-@app.get("/items/{item_id}")
-async def loadKatalog(item_id):
-    return {"item_id": item_id}
+@app.get("/load-katalog")
+async def loadKatalog(db: Session = Depends(get_db)):
+    products = crud.get_katalog(db)
+    return products
 
