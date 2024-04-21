@@ -50,3 +50,4 @@ async def loadKatalog(db: Session = Depends(get_db)):
     products = crud.get_katalog(db)
     return products
 
+    

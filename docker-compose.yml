@@ -23,14 +23,3 @@ services:
         target: /app/index.html
     ports:
       - "5173:5173"
-
-  db:
-    image: postgres:9.4
-    ports:
-        - 5432:5432
-    environment:
-        POSTGRES_PASSWORD: 123
-        POSTGRES_USER: postgres
-        PGDATA : /var/lib/postgresql/data
-    volumes:
-        - /projects/own/docker_php/pgdata:/var/lib/postgresql/data

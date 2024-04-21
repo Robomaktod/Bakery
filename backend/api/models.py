@@ -1,15 +1,17 @@
-from sqlalchemy import Boolean, Column, ForeignKey, Integer, String, Float
+from sqlalchemy import Boolean, Column, ForeignKey, Integer, String, Float, Text
 from sqlalchemy.orm import relationship
 
 from .database import Base
 
 
 class Product(Base):
-    __tablename__ = "product"
+    __tablename__ = 'product'
 
-    id = Column(Integer, primary_key=True)
-    name = Column(String, unique=True, index=True)
-    price = Column(Float)
-    image = Column(String, default=True)
-
-    #items = relationship("Item", back_populates="owner")
+    product_id = Column(Integer, primary_key=True)
+    product_name = Column(String(100), unique=True, nullable=False)
+    price = Column(Float, nullable=False)
+    quantity = Column(Float, nullable=False)
+    weight = Column(Float, nullable=False)
+    description = Column(Text)
+    category = Column(String(50))
+    image = Column(Text)
