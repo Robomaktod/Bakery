@@ -6,7 +6,6 @@ from .con_settings import postgres_database as pd
 
 def get_engine():
     database_url = f"postgresql://citus:bebra-123@c-bakery.yniyiilfw5yyor.postgres.cosmos.azure.com:5432/bakery?sslmode=require"
-    print(database_url)
     engine = create_engine(database_url)
     return engine
 
