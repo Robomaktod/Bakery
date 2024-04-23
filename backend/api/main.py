@@ -53,7 +53,7 @@ async def GetIngridient(db: Session = Depends(get_db)):
 
 @app.post("/register")
 def register_user(user: schemas.UserCreate, db: Session = Depends(get_db)):
-    existing_user = db.query(models.User).filter_by(email=user.email).first()
+    existing_user = crud.check_user_existance(db, user)
     if existing_user:
         raise HTTPException(status_code=400, detail="Email already registered")
 
@@ -77,3 +77,14 @@ def register_user(user: schemas.UserCreate, db: Session = Depends(get_db)):
     return {"message":"user created successfully"}
 
 
+@app.get("/get-users")
+def get_users(db: Session = Depends(get_db)):
+    users = crud.return_users(db)
+    return users    
+
+@app.get("/get-user-byid")
+def get_user(id: int, db: Session = Depends(get_db)):
+    user = crud.return_user(db, id)
+    if not user: raise HTTPException(status_code=404, detail="User not found")
+    return user
+    

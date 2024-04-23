@@ -1,4 +1,4 @@
-FROM node:20-alpine
+FROM node:latest
 
 WORKDIR /app
 ENV PATH /app/node_modules/.bin:$PATH
@@ -8,6 +8,7 @@ COPY frontend/package.json ./
 
 
 RUN npm install
+RUN npm install react-router-dom
 
 # Add app
 COPY frontend/ ./
