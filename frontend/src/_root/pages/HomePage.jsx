@@ -1,11 +1,9 @@
 import React from 'react'
 
-function home() {
+function home () {
   return (
     <>
-      <div>test</div>
-        <p>hello</p>
-        test
+      <p>hello</p>
     </>
   )
 }
