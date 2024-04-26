@@ -9,7 +9,9 @@ COPY frontend/package.json ./
 
 RUN npm install
 RUN npm install react-router-dom
+RUN npm install -D tailwindcss
 
+COPY frontend/tailwind.config.js .
 
 # Add app
 COPY frontend/ ./

@@ -2,7 +2,9 @@ import React from 'react'
 
 const rootLayout = () => {
   return (
-    <div>rootLayout</div>
+    <div>rootLayout
+     <p>hello</p></div>
+    
   )
 }
 
