@@ -10,6 +10,7 @@ COPY frontend/package.json ./
 RUN npm install
 RUN npm install react-router-dom
 
+
 # Add app
 COPY frontend/ ./
 
