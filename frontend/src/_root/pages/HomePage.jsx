@@ -1,11 +1,10 @@
 import React from 'react'
-import ProductList from '../ProductList';
+import ProductList from '/src/components/ProductList.jsx';
 
 const home = () => {
   return (
     <>
-      <ProductList></ProductList>
-      hjjvgv
+      <ProductList />
     </>
 
   )

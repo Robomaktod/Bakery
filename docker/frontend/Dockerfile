@@ -8,9 +8,8 @@ COPY frontend/package.json ./
 
 
 RUN npm install
-RUN npm install axios
-RUN npm install react-router-dom
-RUN npm install -D tailwindcss
+RUN npm install axios \
+    npm install react-router-dom 
 
 COPY frontend/tailwind.config.js .
 
