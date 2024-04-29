@@ -7,9 +7,9 @@ ENV PATH /app/node_modules/.bin:$PATH
 COPY frontend/package.json ./
 
 
-RUN npm install
-RUN npm install axios \
-    npm install react-router-dom 
+RUN npm install \
+    && npm install axios \
+    && npm install react-router-dom 
 
 COPY frontend/tailwind.config.js .
 

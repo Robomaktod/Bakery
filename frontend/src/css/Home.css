@@ -1,0 +1,40 @@
+body{
+    background-image: url("https://cdn.discordapp.com/attachments/1234591349706330122/1234591386993692682/bg_image.png?ex=66314a54&is=662ff8d4&hm=cf7ff155ede6a9bb9906c11cd6e37b123fba51d0efd8f2f19cd500c66f171e1c&");
+
+}
+
+.main-text{
+width: 100%;
+  height: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+
+font-family: 'Marko One';
+font-style: normal;
+font-weight: 400;
+font-size: 200px;
+line-height: 150px;
+/* or 75% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #FFD770;
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.main-subtext{
+width: 100%;
+height: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+font-family: 'Marko One';
+font-style: normal;
+font-weight: 400;
+font-size: 48px;
+line-height: 64px;
+
+color: #FFFCB5;
+}

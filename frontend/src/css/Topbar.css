@@ -1,0 +1,38 @@
+.navbar {
+    width: 1920px;
+    height: 74.67px;
+    display: inline-block;
+    background: #3A271C;
+  }
+  
+  .nav-list {
+    list-style-type: none;
+    display: inline-flex;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
+  }
+  
+  .nav-link:visited{
+    text-decoration: none;
+}
+  .nav-link:hover {
+    background-color: #555;
+  }
+  
