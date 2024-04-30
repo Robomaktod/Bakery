@@ -1,6 +1,6 @@
 body{
     background-image: url("https://cdn.discordapp.com/attachments/1234591349706330122/1234591386993692682/bg_image.png?ex=66314a54&is=662ff8d4&hm=cf7ff155ede6a9bb9906c11cd6e37b123fba51d0efd8f2f19cd500c66f171e1c&");
-
+    background-repeat: no-repeat;
 }
 
 .main-text{

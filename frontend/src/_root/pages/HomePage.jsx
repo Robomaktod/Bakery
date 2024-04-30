@@ -8,6 +8,7 @@ const home = () => {
     <>
       <h1 className='main-text'>Flour power</h1>
       <h3 className='main-subtext'>Kneading Happiness Into Every Slice</h3>
+      <ProductList />
     </>
 
   )
