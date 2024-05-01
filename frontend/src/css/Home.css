@@ -1,40 +1,45 @@
 body{
-    background-image: url("https://cdn.discordapp.com/attachments/1234591349706330122/1234591386993692682/bg_image.png?ex=66329bd4&is=66314a54&hm=f76e9d27bb9cb80120a44c2c5b933370a2df636b961859d87bbe1c4cb18faf97&");
-    background-repeat: no-repeat;
+  background-image: url("https://cdn.discordapp.com/attachments/1234591349706330122/1234591386993692682/bg_image.png?ex=66329bd4&is=66314a54&hm=f76e9d27bb9cb80120a44c2c5b933370a2df636b961859d87bbe1c4cb18faf97&");
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
 }
 
 .main-text{
-width: 100%;
+  width: 100%;
   height: 100%;
-display: flex;
-align-items: center;
-justify-content: center;
-
-font-family: 'Marko One';
-font-style: normal;
-font-weight: 400;
-font-size: 200px;
-line-height: 150px;
-/* or 75% */
-display: flex;
-align-items: center;
-text-align: center;
-
-color: #FFD770;
-text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Marko One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 200px;
+  line-height: 150px;
+  /* or 75% */
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #FFD770;
+  text-shadow: 10px 10px 10px rgba(0.25, 0.25, 0.25, 0.25);
+  -webkit-text-stroke: 2px black;
+  margin-bottom: 130px;
 }
 
-.main-subtext{
-width: 100%;
-height: 100%;
-display: flex;
-align-items: center;
-justify-content: center;
-font-family: 'Marko One';
-font-style: normal;
-font-weight: 400;
-font-size: 48px;
-line-height: 64px;
-
-color: #FFFCB5;
+.main-subtext {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  font-family: 'Marko One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 70px;
+  color: #FFFCB5;
+  text-shadow: 
+    3px 30px 30px rgba(1, 0, 0, 0.332), 
+    -5px -13px 20px rgba(0, 0, 0, 0.7);
 }
