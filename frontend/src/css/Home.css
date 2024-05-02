@@ -1,13 +1,12 @@
-body{
-  background-image: url("https://cdn.discordapp.com/attachments/1234591349706330122/1234591386993692682/bg_image.png?ex=66329bd4&is=66314a54&hm=f76e9d27bb9cb80120a44c2c5b933370a2df636b961859d87bbe1c4cb18faf97&");
+.main-body{
+  background-image: url("../assets/bg_image.png");
   background-repeat: no-repeat;
   width: 100%;
-  height: 100%;
+  height: 90vh;
 }
 
 .main-text{
   width: 100%;
-  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -29,7 +28,6 @@ body{
 
 .main-subtext {
   width: 100%;
-  height: 100%;
   display: flex;
   align-items: center;
   text-align: center;
