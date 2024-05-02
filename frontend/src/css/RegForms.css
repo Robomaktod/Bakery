@@ -1,15 +1,13 @@
-form {
+.signup-form {
     background-color: rgba(221, 221, 221, 0.5);
     backdrop-filter: blur(5px);
-    border-radius: 20px; /* Збільшимо радіус для круглих країв */
-    padding: 20px; /* Збільшимо відступи від країв форми */
-  
-    /* Змінимо розмір і положення форми */
+    border-radius: 20px; 
+    padding: 20px; 
     width: 80%;
     max-width: 400px;
     margin: 0 auto;
     margin-top: 40px;
-    position: relative; /* Змінили position на relative */
+    position: relative;
   }
   
   h1 {
@@ -30,4 +28,28 @@ form {
   button:hover {
     background-color: #0056b3;
   }
+
+  .password-input {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; 
+  }
   
+  .password-input:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+
+  .namesInput{
+    display: inline-flex;
+  }
+
+  .signUp{
+    font-size: 50px;
+    margin-bottom: 40px;
+  }

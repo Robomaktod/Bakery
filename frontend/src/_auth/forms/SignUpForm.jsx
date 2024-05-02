@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import InputComponent from '../../components/InputComponent';
-
 import "../../css/RegForms.css"
 
 const SignUpForm = () => {
@@ -10,11 +9,11 @@ const SignUpForm = () => {
 
   const handleNameChange = (e) => {
     setName(e.target.value);
-  };
+  }
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
-  };
+  }
 
   const handlePasswordChange = (e) =>{
     setPassword(e.target.value)
@@ -22,18 +21,28 @@ const SignUpForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-  };
+  }
+
 
   return (
-    <form onSubmit={handleSubmit}>
-      <h1>Sign up</h1>
+    <form className="signup-form" onSubmit={handleSubmit}>
+      <h1 className='signUp'>Sign up</h1>
+      <div className='namesInput'>
       <InputComponent
-        label="Name:"
+        label="First name:"
         type="text"
-        placeholder="Enter your name"
+        placeholder="Enter your fisrt name"
         value={name}
         onChange={handleNameChange}
       />
+       <InputComponent
+        label="Last name:"
+        type="text"
+        placeholder="Enter your last name"
+        value={name}
+        onChange={handleNameChange}
+      />
+      </div>
       <InputComponent
         label="Email:"
         type="email"
@@ -42,6 +51,7 @@ const SignUpForm = () => {
         onChange={handleEmailChange}
       />
       <InputComponent
+        className="password-input"
         label="Password:"
         type="password"
         placeholder="Enter your password"
@@ -52,7 +62,5 @@ const SignUpForm = () => {
     </form>
   );
 };
-
-
 
 export default SignUpForm;

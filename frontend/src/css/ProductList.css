@@ -25,7 +25,7 @@
 
 .product-details {
     margin-top: 10px;
-    position: relative; /* Устанавливаем относительное позиционирование для внутренних элементов */
+    position: relative; 
 }
 
 .product h3 {
@@ -37,7 +37,7 @@
 .product p {
     margin-bottom: 5px;
     font-size: 14px;
-    margin-top: 5px; /* Увеличиваем отступ сверху для цены */
+    margin-top: 5px; 
 }
 
 .product button {
