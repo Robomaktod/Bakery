@@ -74,14 +74,23 @@
     z-index: 1000;
 }
 
-.menu-image {
-    width: 100%;
-    border-radius: 8px;
+.menu-close {
+    text-align: right;
     margin-bottom: 10px;
 }
 
+.menu-content {
+    display: flex;
+}
+
+.menu-image {
+    width: 50%;
+    border-radius: 8px;
+}
+
 .menu-details {
-    text-align: center;
+    flex: 1;
+    padding-left: 20px;
 }
 
 .menu-details h3 {

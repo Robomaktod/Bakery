@@ -39,11 +39,18 @@ const ProductList = () => {
                     </button>
                     {product.showMenu && (
                         <div className="dropdown-menu">
-                            <img src={product.image} alt={product.product_name} className="menu-image" />
-                            <div className="menu-details">
-                                <h3>{product.product_name}</h3>
-                                <p>Price: ${product.price}</p>
-                                <button>Add to Cart</button>
+                            <div className="menu-close">
+                                <button onClick={() => handleToggleMenu(product.product_id)}>
+                                    Close
+                                </button>
+                            </div>
+                            <div className="menu-content">
+                                <img src={product.image} alt={product.product_name} className="menu-image" />
+                                <div className="menu-details">
+                                    <h3>{product.product_name}</h3>
+                                    <p>Price: ${product.price}</p>
+                                    <button>Add to Cart</button>
+                                </div>
                             </div>
                         </div>
                     )}
