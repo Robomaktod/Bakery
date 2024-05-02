@@ -1,18 +1,9 @@
 import { useState, useEffect } from 'react';
 import axios from "axios";
-//import { useHistory } from 'react-router-dom';
-import { getKatalog } from '../api/queries';
 import "../css/ProductList.css";
 
-
-
 const ProductList = () => {
-  const [products, setProducts] = useState([]);
-    // const history = useHistory();
-    // const redirectToProductPage = (productId) => {
-    //     history.push(`/product/${productId}`);
-    // };
-
+    const [products, setProducts] = useState([]);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -20,26 +11,46 @@ const ProductList = () => {
             setProducts(response.data);
         };
 
+        fetchData();
+    }, []);
 
+    const handleToggleMenu = (productId) => {
+        setProducts(prevProducts => {
+            return prevProducts.map(product => {
+                if (product.product_id === productId) {
+                    return { ...product, showMenu: !product.showMenu };
+                }
+                return product;
+            });
+        });
+    };
 
-    fetchData();
-  }, []);
-
-
-  return (
-      <div className="product-container">
-          {products.map(product => (
-              <div key={product.product_id} className="product">
-                  <img src={product.image} alt={product.product_name}/>
-                  <div className="product-details">
-                      <h3>{product.product_name}</h3>
-                      <p>Price: ${product.price}</p>
-                  </div>
-                  <button>More</button>
-              </div>
-          ))}
-      </div>
-  );
+    return (
+        <div className="product-container">
+            {products.map(product => (
+                <div key={product.product_id} className="product">
+                    <img src={product.image} alt={product.product_name} />
+                    <div className="product-details">
+                        <h3>{product.product_name}</h3>
+                        <p>Price: ${product.price}</p>
+                    </div>
+                    <button onClick={() => handleToggleMenu(product.product_id)}>
+                        More
+                    </button>
+                    {product.showMenu && (
+                        <div className="dropdown-menu">
+                            <img src={product.image} alt={product.product_name} className="menu-image" />
+                            <div className="menu-details">
+                                <h3>{product.product_name}</h3>
+                                <p>Price: ${product.price}</p>
+                                <button>Add to Cart</button>
+                            </div>
+                        </div>
+                    )}
+                </div>
+            ))}
+        </div>
+    );
 };
 
 export default ProductList;
