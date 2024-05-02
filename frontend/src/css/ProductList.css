@@ -12,7 +12,7 @@
     width: 300px;
     margin-top: 10px;
     margin-left: 40px;
-    background-color: #fff;
+    background-color: #ffbd97;
     position: relative;
 }
 
@@ -52,7 +52,7 @@
 }
 
 .product:hover {
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: #ffd5bd;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
