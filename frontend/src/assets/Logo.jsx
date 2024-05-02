@@ -1,14 +1,17 @@
 import React from 'react'
+import '/src/css/Logo.css'
 
 const Logo = () => {
   return (
     <svg
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
-    width="50"
-    height="50"
+    width="55"
+    height="55"
     fill="none"
     viewBox="0 0 50 50"
+    className="logo-path"
+    
   >
     <path fill="url(#pattern0_4_25)" d="M0 0H50V50H0z"></path>
     <defs>
@@ -18,7 +21,7 @@ const Logo = () => {
         height="1"
         patternContentUnits="objectBoundingBox"
       >
-        <use transform="scale(.00278)" xlinkHref="#image0_4_25"></use>
+        <use transform="scale(.00278)" xlinkHref="#image0_4_25" ></use>
       </pattern>
       <image
         id="image0_4_25"
