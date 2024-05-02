@@ -28,10 +28,10 @@ const Topbar = () => {
           <Link to="/">Home</Link>
         </li>
          <li className="nav-link">
-          <Link to="/about">About</Link>
+          <Link to="/menu">Menu</Link>
         </li>
          <li className="nav-link">
-          <Link to="/services">Services</Link>
+          <Link to="/about">About</Link>
         </li>
          <li className="nav-link">
           <Link to="/contact">Contact</Link>
