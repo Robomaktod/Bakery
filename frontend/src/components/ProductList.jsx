@@ -45,7 +45,9 @@ const ProductList = () => {
                                 </button>
                             </div>
                             <div className="menu-content">
-                                <img src={product.image} alt={product.product_name} className="menu-image" />
+                                <div className="menu-image">
+                                    <img src={product.image} alt={product.product_name} />
+                                </div>
                                 <div className="menu-details">
                                     <h3>{product.product_name}</h3>
                                     <p>Price: ${product.price}</p>
