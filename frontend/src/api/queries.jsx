@@ -7,7 +7,7 @@ export async function getKatalog(){
 
     try{
         const response = await axios.get(`${dbUrl}/load-katalog`);
-        return response;
+        return response.data;
     } catch (error) {
         throw error;
     }
