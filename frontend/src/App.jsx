@@ -1,7 +1,7 @@
 import React from 'react'
 import {Routes, Route} from 'react-router-dom'
 
-import { Home, Menu } from './_root/pages'
+import { Home, Menu, About } from './_root/pages'
 import RootLayout from './_root/RootLayout'
 
 import AuthLayout from './_auth/AuthLayout'
@@ -22,6 +22,7 @@ const App = () => {
         <Route element={<RootLayout />}>
           <Route index element={ <Home /> } />
           <Route path="/menu" element={<Menu/>}></Route>
+          <Route path="/about" element={<About/>}></Route>
         </Route> 
 
       </Routes>
