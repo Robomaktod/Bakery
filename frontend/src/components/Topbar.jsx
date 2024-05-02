@@ -37,7 +37,8 @@ const Topbar = () => {
           <Link to="/contact">Contact</Link>
         </li>
       </ul>
-
+      {/* <img className="accountImage" src="../assets/blankProfilePic.png" alt="image"/> */}
+      
     </header>
   );
 };
