@@ -1,9 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import axios from "axios";
+//import { useHistory } from 'react-router-dom';
 import { getKatalog } from '../api/queries';
+import "../css/ProductList.css";
+
+
 
 const ProductList = () => {
   const [products, setProducts] = useState([]);
+    // const history = useHistory();
+    // const redirectToProductPage = (productId) => {
+    //     history.push(`/product/${productId}`);
+    // };
+
 
     useEffect(() => {
         const fetchData = async () => {
@@ -12,21 +21,22 @@ const ProductList = () => {
         };
 
 
+
     fetchData();
   }, []);
-console.log(products)
+
+
   return (
-    <div>
-      <h1>Products</h1>
-      <ul>
-         {products.map(product => (
-          <li key={product.product_id}>
-            <h3>{product.product_name}</h3>
-            <p>Price: ${product.price}</p>
-          </li>
-        ))}
-      </ul>
-    </div>
+      <div className="product-container">
+          {products.map(product => (
+              <div key={product.product_id} className="product">
+                  <img src={product.image_url} alt={product.product_name}/>
+                  <h3>{product.product_name}</h3>
+                  <p>Price: ${product.price}</p>
+                  <button>More</button>
+              </div>
+          ))}
+      </div>
   );
 };
 
