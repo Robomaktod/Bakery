@@ -30,9 +30,11 @@ const ProductList = () => {
       <div className="product-container">
           {products.map(product => (
               <div key={product.product_id} className="product">
-                  <img src={product.image_url} alt={product.product_name}/>
-                  <h3>{product.product_name}</h3>
-                  <p>Price: ${product.price}</p>
+                  <img src={product.image} alt={product.product_name}/>
+                  <div className="product-details">
+                      <h3>{product.product_name}</h3>
+                      <p>Price: ${product.price}</p>
+                  </div>
                   <button>More</button>
               </div>
           ))}
