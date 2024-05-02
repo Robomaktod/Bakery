@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import InputComponent from '../../components/InputComponent';
 
+import "../../css/RegForms.css"
+
 const SignUpForm = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
   const handleNameChange = (e) => {
     setName(e.target.value);
@@ -13,12 +16,17 @@ const SignUpForm = () => {
     setEmail(e.target.value);
   };
 
+  const handlePasswordChange = (e) =>{
+    setPassword(e.target.value)
+  }
+
   const handleSubmit = (e) => {
     e.preventDefault();
   };
 
   return (
     <form onSubmit={handleSubmit}>
+      <h1>Sign up</h1>
       <InputComponent
         label="Name:"
         type="text"
@@ -32,6 +40,13 @@ const SignUpForm = () => {
         placeholder="Enter your email"
         value={email}
         onChange={handleEmailChange}
+      />
+      <InputComponent
+        label="Password:"
+        type="password"
+        placeholder="Enter your password"
+        value={password}
+        onChange={handlePasswordChange}
       />
       <button type="submit">Submit</button>
     </form>

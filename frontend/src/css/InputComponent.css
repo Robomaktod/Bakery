@@ -33,6 +33,7 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    flaot:right;
   }
   
   button[type="submit"]:hover {
