@@ -79,7 +79,6 @@
 }
 
 .menu-close button {
-    background-color: transparent;
     border: none;
     cursor: pointer;
     font-size: 24px;
@@ -92,7 +91,7 @@
 .menu-image {
     width: 50%;
     border-radius: 8px;
-    overflow: hidden; /* Обрезаем изображение, чтобы оно не выходило за пределы блока */
+    overflow: hidden;
 }
 
 .menu-image img {
